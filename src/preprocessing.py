@@ -3,9 +3,9 @@ from PIL import Image
 
 # TODO: change this individually
 data_dir = '../data/'
-save_dir = '../data_preprocessed/'
+save_dir = '../data_preprocessed/preprocessed_64/'
 
-image_size = 800
+image_size = 64
 crop_size = 512
 
 if not os.path.isdir(save_dir):
@@ -13,8 +13,7 @@ if not os.path.isdir(save_dir):
 
 img_list = os.listdir(data_dir)
 
-# crop to 512x512 and resize back to 800x800 with linear interpolation
-for i in range(10000):
+for i in range(5000):
     img = Image.open(data_dir + img_list[i])
     c_x = (img.size[0] - crop_size) // 2
     c_y = (img.size[1] - crop_size) // 2
