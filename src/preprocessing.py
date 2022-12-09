@@ -5,10 +5,13 @@ from PIL import Image
 data_dir = '../../data/'
 # data_dir = '../data/'
 # save_dir = '../data_preprocessed/preprocessed_64/'
-save_dir = '../data_preprocessed_128/preprocessed_128/'
+# save_dir = '../data_preprocessed_128/preprocessed_128/'
+save_dir = '../data_preprocessed_256/preprocessed_256/'
 
-image_size = 128
 # image_size = 64
+# image_size = 128
+image_size = 256
+
 crop_size = 512
 
 if not os.path.isdir(save_dir):
