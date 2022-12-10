@@ -22,7 +22,7 @@ def train(generator, discriminator, train_loader, optimizer_gen, optimizer_dis, 
     generator_losses = []
     discriminator_losses = []
     iters = 0
-    num_epochs = 1
+    num_epochs = 2000
     real_label = 1
     fake_label = 0
     fixed_noise = torch.randn(64, noise_size, 1, 1, device=device)
@@ -64,7 +64,7 @@ def train(generator, discriminator, train_loader, optimizer_gen, optimizer_dis, 
             generator_losses.append(generator_loss.item())
             discriminator_losses.append(discriminator_loss.item())
 
-            if (iters % 250 == 0) or ((epoch == num_epochs - 1) and (i == len(train_loader) - 1)):
+            if (iters % 750 == 0) or ((epoch == num_epochs - 1) and (i == len(train_loader) - 1)):
                 with torch.no_grad():
                     fake = generator(fixed_noise).detach().cpu()
                 img_list.append(vutils.make_grid(fake, padding=1, normalize=True))
@@ -75,7 +75,7 @@ def train(generator, discriminator, train_loader, optimizer_gen, optimizer_dis, 
 
 def plot_loss(generator_losses, discriminator_losses):
     plt.figure(figsize=(10, 5))
-    plt.title("Generator and Discriminator Loss During Training")
+    plt.title("DCGAN Generator and Discriminator Loss During Training")
     plt.plot(generator_losses, label="Generator")
     plt.plot(discriminator_losses, label="Discriminator")
     plt.xlabel("Iterations")
