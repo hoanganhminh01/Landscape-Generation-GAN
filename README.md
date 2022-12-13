@@ -1,19 +1,19 @@
 # CSE 599G1 Final Project: Landscape Generation using Deep Convolutional Generative Adversarial Networks
 
-- "[Landscape Pictures](https://www.kaggle.com/datasets/arnaud58/landscape-pictures)" dataset by arnaud58 on Kaggle. This a dataset oif 4,319 landscape images of varying sizes.
+- "[Landscape Pictures](https://www.kaggle.com/datasets/arnaud58/landscape-pictures)" dataset by arnaud58 on Kaggle. This a dataset of 4,319 landscape images of varying sizes.
 
 The directory structure for our project
 
 ```
 ├───data_preprocessed/preprocessed_64 // preprocessed 64x64 images
-... // preprocessed 128x128 are not uploaded but can be generated with preprocessing.py
-├───data_preprocessed_256/preprocessed_256 //
-├───outputs
+... // preprocessed 128x128 images are not uploaded but can be generated with preprocessing.py
+├───data_preprocessed_256/preprocessed_256 // preprocessed 256x256 images
+├───outputs // labeled below
 └───src
 │   |───DCGAN.py // 64x64 model
 │   |───DCGAN128.py // 128x128 model
 │   |───DCGAN256.py // 256x256 model
-│   |───preprocessing.py // preprocessing code with result image size parameter
+│   |───preprocessing.py // preprocessing code parameterized by desired resulting image size
 │   |───train.py // 64x64 training code
 │   |───train128.py // 128x128 training code
 │   |───train256.py // 256x256 training code
