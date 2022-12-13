@@ -20,8 +20,8 @@ The directory structure for our project
 ```
 
 ## How to execute
-- Use preprocessing.py to generate preprocessed dataset of desired size, saving to a new directory of the form data_preprocessed[SIZE]/preprocessed_[SIZE]
-- Run train[SIZE].py
+- Use `preprocessing.py` to generate preprocessed dataset of desired size, saving to a directory of the form `data_preprocessed[SIZE]/preprocessed_[SIZE]`
+- Run `train[SIZE].py`
 
 ## Example results
 - Figure_1.png // DCGAN loss (initial experiment)
