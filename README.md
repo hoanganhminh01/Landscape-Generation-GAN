@@ -1,6 +1,6 @@
 # CSE 599G1 Final Project: Landscape Generation using Deep Convolutional Generative Adversarial Networks
 
-- "Landscape Pictures" dataset by arnaud58 on Kaggle. This a dataset oif 4,319 landscape images of varying sizes.
+- "[Landscape Pictures](https://www.kaggle.com/datasets/arnaud58/landscape-pictures)" dataset by arnaud58 on Kaggle. This a dataset oif 4,319 landscape images of varying sizes.
 
 The directory structure for our project
 
